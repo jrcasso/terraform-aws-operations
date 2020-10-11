@@ -17,7 +17,13 @@ variable "parent_zone" {
   description = "VPC subnet CIDR for the operation"
 }
 
+variable "profile" {
+  type        = string
+  default     = "personal"
+  description = "AWS profile"
+}
+
 variable "name" {
   type        = string
-  description = "Infrastructural environment: dev/stage/production"
+  description = "Operation name; prototypical scopes include dev, stage, and production 'environments'."
 }

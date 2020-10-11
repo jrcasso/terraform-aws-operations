@@ -1,5 +1,9 @@
-output "vpc_id" {
-  value = aws_vpc.operation.id
+output "hosted_zone" {
+    value = {
+        id = aws_route53_zone.operation.id
+        name = aws_route53_zone.operation.name
+        name_servers = aws_route53_zone.operation.name_servers
+    }
 }
 
 output "sg_ids" {
@@ -10,10 +14,6 @@ output "sg_ids" {
     ]
 }
 
-output "hosted_zone" {
-    value = {
-        id = aws_route53_zone.operation.id
-        name = aws_route53_zone.operation.name
-        name_servers = aws_route53_zone.operation.name_servers
-    }
+output "vpc_id" {
+  value = aws_vpc.operation.id
 }

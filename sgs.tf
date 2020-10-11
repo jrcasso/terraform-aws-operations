@@ -1,7 +1,5 @@
-
-
-
 resource "aws_default_security_group" "default" {
+  // Default behavior is to accept all
   vpc_id = aws_vpc.operation.id
 
   ingress {
@@ -25,7 +23,7 @@ resource "aws_security_group" "allow_http_https" {
   vpc_id      = aws_vpc.operation.id
 
   ingress {
-    description = "HTTPS from VPC"
+    description = "HTTPS from anywhere"
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
@@ -33,7 +31,7 @@ resource "aws_security_group" "allow_http_https" {
   }
 
   ingress {
-    description = "HTTP from VPC"
+    description = "HTTP from anywhere"
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
@@ -58,7 +56,7 @@ resource "aws_security_group" "allow_ssh" {
   vpc_id      = aws_vpc.operation.id
 
   ingress {
-    description = "SSH from VPC"
+    description = "SSH from anywhere"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
