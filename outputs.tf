@@ -17,3 +17,7 @@ output "sg_ids" {
 output "vpc_id" {
   value = aws_vpc.operation.id
 }
+
+output "vpc_cidr_block" {
+  value = aws_vpc.operation.cidr_block
+}
