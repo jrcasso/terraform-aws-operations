@@ -4,7 +4,7 @@ resource "aws_vpc" "operation" {
   enable_dns_support   = true
 
   tags = {
-    env = var.name
+    ops = var.name
   }
 }
 
@@ -12,7 +12,7 @@ resource "aws_internet_gateway" "operation" {
   vpc_id = aws_vpc.operation.id
 
   tags = {
-    env = var.name
+    ops = var.name
   }
 }
 
@@ -20,7 +20,7 @@ resource "aws_default_route_table" "operation" {
   default_route_table_id = aws_vpc.operation.default_route_table_id
 
   tags = {
-    env = var.name
+    ops = var.name
   }
 }
 

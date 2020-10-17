@@ -46,7 +46,7 @@ resource "aws_security_group" "allow_http_https" {
   }
 
   tags = {
-    env = var.name
+    ops = var.name
   }
 }
 
@@ -71,6 +71,6 @@ resource "aws_security_group" "allow_ssh" {
   }
 
   tags = {
-    env = var.name
+    ops = var.name
   }
 }

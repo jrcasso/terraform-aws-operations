@@ -2,7 +2,7 @@ resource "aws_route53_zone" "operation" {
   name = "${var.name}.${var.parent_zone.name}"
 
   tags = {
-    env = var.name
+    ops = var.name
   }
 }
 
