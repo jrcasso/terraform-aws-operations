@@ -1,6 +1,6 @@
 variable "region" {
   type        = string
-  default = "us-east-1"
+  default     = "us-east-1"
   description = "AWS Region"
 }
 
@@ -10,7 +10,7 @@ variable "vpc_cidr" {
 }
 
 variable "parent_zone" {
-  type        = object({
+  type = object({
     name = string
     id   = string
   })
