@@ -1,3 +1,7 @@
+output "region" {
+  value = var.region
+}
+
 output "hosted_zone" {
   value = {
     id           = aws_route53_zone.operation.id
