@@ -18,6 +18,10 @@ output "sg_ids" {
   ]
 }
 
+output "internet_gateway_id" {
+  value = aws_internet_gateway.operation.id
+}
+
 output "vpc_id" {
   value = aws_vpc.operation.id
 }
